@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Android | MarshalChen's Blog]]></title>
+  <link href="http://cymcsg.github.io/blog/categories/android/atom.xml" rel="self"/>
+  <link href="http://cymcsg.github.io/"/>
+  <updated>2015-07-24T15:22:32+08:00</updated>
+  <id>http://cymcsg.github.io/</id>
+  <author>
+    <name><![CDATA[MarshalChen]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[JsonUtils Which Uses Gson]]></title>
+    <link href="http://cymcsg.github.io/blog/2014/07/30/jsonutils-which-uses-gson/"/>
+    <updated>2014-07-30T11:00:41+08:00</updated>
+    <id>http://cymcsg.github.io/blog/2014/07/30/jsonutils-which-uses-gson</id>
+    <content type="html"><![CDATA[<pre><code class="java ">public class JsonUtil {
+    public static &lt;T&gt; T getListFromJson(String jsonString, TypeToken typeToken) {
+        Gson gson = new Gson();
+        return gson.fromJson(jsonString, typeToken.getType());
+    }
+    public static &lt;T&gt; T getTFromJson(String jsonString, Class&lt;T&gt; t) {
+        Gson gson = new Gson();
+        return gson.fromJson(jsonString, t);
+    }
+    public static ArrayList getArrayListMapFromJson(String jsonString) {
+        JsonParser jsonParser = new JsonParser();
+        Gson gson = new Gson();
+        JsonElement jsonElement = jsonParser.parse(jsonString);
+        Logs.d(jsonElement.isJsonArray() + "   " + jsonElement.isJsonObject());
+        ArrayList&lt;HashMap&lt;String, Object&gt;&gt; arrayList = new ArrayList&lt;HashMap&lt;String, Object&gt;&gt;();
+        if (jsonElement.isJsonObject()) {
+            arrayList.add(gson.fromJson(jsonElement, HashMap.class));
+        } else if (jsonElement.isJsonArray()) {
+            arrayList = getListFromJson(jsonString, new TypeToken&lt;ArrayList&lt;HashMap&lt;String, Object&gt;&gt;&gt;() {
+            });
+        }
+        return arrayList;
+    }
+    public static ArrayList getArrayListFromJson(String jsonString) {
+        JsonParser jsonParser = new JsonParser();
+        Gson gson = new Gson();
+        JsonElement jsonElement = jsonParser.parse(jsonString);
+        Logs.d(jsonElement.isJsonArray() + "   " + jsonElement.isJsonObject());
+        ArrayList arrayList = new ArrayList();
+        if (jsonElement.isJsonObject()) {
+            arrayList.add(gson.fromJson(jsonElement, HashMap.class));
+        } else if (jsonElement.isJsonArray()) {
+            arrayList = getListFromJson(jsonString, new TypeToken&lt;ArrayList&gt;() {
+            });
+        }
+        return arrayList;
+    }
+    public static Object getObjectListFromJson(String jsonString) {
+        Gson gson = new Gson();
+        Object object = gson.fromJson(jsonString, new TypeToken&lt;List&lt;Object&gt;&gt;() {
+        }.getType());
+        return object;
+    }
+    public static Object getObjectFromJson(String jsonString) {
+        Gson gson = new Gson();
+        Object object = gson.fromJson(jsonString, Object.class);
+        return object;
+    }
+    public static void iteratorArrayList(ArrayList arrayList) {
+        Iterator it1 = arrayList.iterator();
+        while (it1.hasNext()) {
+            int i = 0;
+            Iterator it = ((HashMap&lt;String, String&gt;) it1.next()).entrySet().iterator();
+            while (it.hasNext()) {
+                i++;
+                Map.Entry entry = (Map.Entry) it.next();
+                Object key = entry.getKey();
+                Object value = entry.getValue();
+                Logs.d("key--" + key + "  value   " + value + "\n");
+            }
+        }
+    }
+    public static void iteratorList(List inputList) {
+        Iterator it1 = inputList.iterator();
+        while (it1.hasNext()) {
+            int i = 0;
+            Iterator it = ((HashMap&lt;String, String&gt;) it1.next()).entrySet().iterator();
+            while (it.hasNext()) {
+                i++;
+                Map.Entry entry = (Map.Entry) it.next();
+                Object key = entry.getKey();
+                Object value = entry.getValue();
+                Logs.d("key--" + key + "  value   " + value + "\n");
+            }
+        }
+    }
+}
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>

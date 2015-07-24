@@ -1,99 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <title>MarshalChen's Blog</title>
-  <meta name="author" content="MarshalChen">
-
-  
-  <meta name="description" content="UltimateAndroid Version:0.5.0 UltimateAndroid is a rapid development framework for developing your apps 快速开发Android应用框架 UltimateAndroid English &hellip;">
-  
-
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  
-  <link rel="canonical" href="http://cymcsg.github.io/">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="MarshalChen's Blog" type="application/atom+xml">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-
-  
-
-</head>
-
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">MarshalChen's Blog</a></h1>
-  
-    <h2>Founder of FlagshipSoft</h2>
-  
-</hgroup>
-
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="https://www.google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="sitesearch" value="cymcsg.github.io">
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-  <li><a href="http://blog.marshalchen.com/UltimateAndroid/">UltimateAndroid</a></li>
-  <li><a href=/ultimateandroiddoc/index.html>UltimateAndroidDoc</a></li>
-  <li><a href="http://blog.marshalchen.com/UltimateRecyclerView/">UltimateRecyclerview</a></li>
-</ul>
-
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  
-    <article>
-      
-  <header>
+  <title><![CDATA[MarshalChen's Blog]]></title>
+  <link href="http://cymcsg.github.io/atom.xml" rel="self"/>
+  <link href="http://cymcsg.github.io/"/>
+  <updated>2015-07-24T15:22:32+08:00</updated>
+  <id>http://cymcsg.github.io/</id>
+  <author>
+    <name><![CDATA[MarshalChen]]></name>
     
-      <h1 class="entry-title"><a href="/blog/2014/10/07/introduction-of-ultimateandroid/">Introduction of UltimateAndroid</a></h1>
-    
-    
-      <p class="meta">
-        
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
 
-
-
-
-<time class='entry-date' datetime='2014-10-07T16:13:57+08:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>4:13 pm</span></time>
-        
-           | <a href="/blog/2014/10/07/introduction-of-ultimateandroid/#disqus_thread"
-             data-disqus-identifier="http://cymcsg.github.io/blog/2014/10/07/introduction-of-ultimateandroid/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h1>UltimateAndroid</h1>
+  
+  <entry>
+    <title type="html"><![CDATA[Introduction of UltimateAndroid]]></title>
+    <link href="http://cymcsg.github.io/blog/2014/10/07/introduction-of-ultimateandroid/"/>
+    <updated>2014-10-07T16:13:57+08:00</updated>
+    <id>http://cymcsg.github.io/blog/2014/10/07/introduction-of-ultimateandroid</id>
+    <content type="html"><![CDATA[<h1>UltimateAndroid</h1>
 
 <h3>Version:0.5.0</h3>
 
@@ -984,38 +909,15 @@ limitations under the License.
 </code></pre>
 
 <hr />
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/07/30/jsonutils-which-uses-gson/">JsonUtils Which Uses Gson</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2014-07-30T11:00:41+08:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>30</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>11:00 am</span></time>
-        
-           | <a href="/blog/2014/07/30/jsonutils-which-uses-gson/#disqus_thread"
-             data-disqus-identifier="http://cymcsg.github.io/blog/2014/07/30/jsonutils-which-uses-gson/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+  <entry>
+    <title type="html"><![CDATA[JsonUtils Which Uses Gson]]></title>
+    <link href="http://cymcsg.github.io/blog/2014/07/30/jsonutils-which-uses-gson/"/>
+    <updated>2014-07-30T11:00:41+08:00</updated>
+    <id>http://cymcsg.github.io/blog/2014/07/30/jsonutils-which-uses-gson</id>
+    <content type="html"><![CDATA[<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -1171,38 +1073,15 @@ limitations under the License.
 </span><span class='line'><span class="o">}</span>
 </span></code></pre></td></tr></table></div></figure>
 
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/07/10/hacker-and-agile-development/">Hacker and Agile Development</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2014-07-10T10:49:09+08:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>10</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>10:49 am</span></time>
-        
-           | <a href="/blog/2014/07/10/hacker-and-agile-development/#disqus_thread"
-             data-disqus-identifier="http://cymcsg.github.io/blog/2014/07/10/hacker-and-agile-development/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>黑客和敏捷开发</h2>
+  <entry>
+    <title type="html"><![CDATA[Hacker and Agile Development]]></title>
+    <link href="http://cymcsg.github.io/blog/2014/07/10/hacker-and-agile-development/"/>
+    <updated>2014-07-10T10:49:09+08:00</updated>
+    <id>http://cymcsg.github.io/blog/2014/07/10/hacker-and-agile-development</id>
+    <content type="html"><![CDATA[<h2>黑客和敏捷开发</h2>
 
 <p>前段时间读了一下Paul Graham的《黑客与画家》（Hackers and Painters: Big Ideas from the Computer Age），虽说这书已经出版良久了，但是读书往往是不讲究时间的，有收获就好。这本书是文集，相对内容比较散，针对的也并非是业内人士，所以不同人在不同角度可以把这本书看出千滋百味。但不管怎么说，我觉得绝大多数人，都可以从这本书中收获良多。本人是IT行业人士，仅从IT创业者角度谈谈自己的理解。</p>
 
@@ -1221,108 +1100,7 @@ limitations under the License.
 <p>现在再回到创业战术的问题上来，针对IT创业的话，具体的战术跟写程式十分密切。而为了能在战术上比对手快速而高效，选择非常敏捷的语言是个好主意。在书中为了能高效的写程式，作者对Lisp十分推崇。对此，我持部分赞同意见。<strong>对于Lisp语言的思想，无疑是现在程序设计语言的典范。但是针对具体的开发过程，直接使用Lisp未必真能非常高效。</strong> 第一，目前已经掌握Lisp语言的程序员相对小众，如果你本来没有掌握Lisp，为了Lisp而Lisp，没有几年的积累，很可能成为“只有宝剑而没有对应剑术”，所以是否使用Lisp得视情况而定。第二，不可否认，目前Lisp的库相对不够丰富，但是对此也有解决方法，就是使用支持Java类库Clojure。这也是我认为Clojure优于Common Lisp和Scheme的重要原因。第三点就是由于Lisp程序员由于太小众了，确实在想扩张的时候容易捉襟见肘。即使是Clojure在国内也丰富不到哪去，对此我的观点是，为什么不试试Ruby呢？当然本文并非语言之争，上述观点也只是鄙人浅见，是鄙人针对目前情况的看法而已，如果读者不认同，还请批评指正。</p>
 
 <p>应该来说，《黑客与画家》还是非常值得一读之书，相信你读了之后，也会有新的理解和体会。最后，我想用《黑客与画家》中的一句话结束文章：“画作永远没有完工的一天，你只是不再画下去而已。 ” 我们的生命，就是作画。</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
-<aside class="sidebar">
-  
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2014/10/07/introduction-of-ultimateandroid/">Introduction of UltimateAndroid</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/07/30/jsonutils-which-uses-gson/">JsonUtils Which Uses Gson</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/07/10/hacker-and-agile-development/">Hacker and Agile Development</a>
-      </li>
-    
-  </ul>
-</section>
-
-<section>
-  <h1>GitHub Repos</h1>
-  <ul id="gh_repos">
-    <li class="loading">Status updating...</li>
-  </ul>
-  
-  <a href="https://github.com/cymcsg">@cymcsg</a> on GitHub
-  
-  <script type="text/javascript">
-    $(document).ready(function(){
-        if (!window.jXHR){
-            var jxhr = document.createElement('script');
-            jxhr.type = 'text/javascript';
-            jxhr.src = '/javascripts/libs/jXHR.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(jxhr, s);
-        }
-
-        github.showRepos({
-            user: 'cymcsg',
-            count: 2,
-            skip_forks: true,
-            target: '#gh_repos'
-        });
-    });
-  </script>
-  <script src="/javascripts/github.js" type="text/javascript"> </script>
-</section>
-
-
-
-
-
-  
-</aside>
-
-    </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2015 - MarshalChen -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
-
-</footer>
-  
-
-<script type="text/javascript">
-      var disqus_shortname = 'marshalchen';
-      
-        
-        var disqus_script = 'count.js';
-      
-    (function () {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    }());
-</script>
-
-
-
-
-
-
-
-
-
-
-
-</body>
-</html>
+</feed>

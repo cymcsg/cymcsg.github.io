@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>MarshalChen's Blog</title>
+  <title>Introduction of UltimateAndroid - MarshalChen's Blog</title>
   <meta name="author" content="MarshalChen">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://cymcsg.github.io/">
+  <link rel="canonical" href="http://cymcsg.github.io/blog/2014/10/07/introduction-of-ultimateandroid/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="MarshalChen's Blog" type="application/atom+xml">
@@ -66,15 +66,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/10/07/introduction-of-ultimateandroid/">Introduction of UltimateAndroid</a></h1>
+      <h1 class="entry-title">Introduction of UltimateAndroid</h1>
     
     
       <p class="meta">
@@ -85,15 +82,15 @@
 
 <time class='entry-date' datetime='2014-10-07T16:13:57+08:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>4:13 pm</span></time>
         
-           | <a href="/blog/2014/10/07/introduction-of-ultimateandroid/#disqus_thread"
-             data-disqus-identifier="http://cymcsg.github.io/blog/2014/10/07/introduction-of-ultimateandroid/">Comments</a>
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://cymcsg.github.io">Comments</a>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><h1>UltimateAndroid</h1>
+<div class="entry-content"><h1>UltimateAndroid</h1>
 
 <h3>Version:0.5.0</h3>
 
@@ -985,255 +982,56 @@ limitations under the License.
 
 <hr />
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/07/30/jsonutils-which-uses-gson/">JsonUtils Which Uses Gson</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2014-07-30T11:00:41+08:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>30</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>11:00 am</span></time>
-        
-           | <a href="/blog/2014/07/30/jsonutils-which-uses-gson/#disqus_thread"
-             data-disqus-identifier="http://cymcsg.github.io/blog/2014/07/30/jsonutils-which-uses-gson/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-<span class='line-number'>48</span>
-<span class='line-number'>49</span>
-<span class='line-number'>50</span>
-<span class='line-number'>51</span>
-<span class='line-number'>52</span>
-<span class='line-number'>53</span>
-<span class='line-number'>54</span>
-<span class='line-number'>55</span>
-<span class='line-number'>56</span>
-<span class='line-number'>57</span>
-<span class='line-number'>58</span>
-<span class='line-number'>59</span>
-<span class='line-number'>60</span>
-<span class='line-number'>61</span>
-<span class='line-number'>62</span>
-<span class='line-number'>63</span>
-<span class='line-number'>64</span>
-<span class='line-number'>65</span>
-<span class='line-number'>66</span>
-<span class='line-number'>67</span>
-<span class='line-number'>68</span>
-<span class='line-number'>69</span>
-<span class='line-number'>70</span>
-<span class='line-number'>71</span>
-<span class='line-number'>72</span>
-<span class='line-number'>73</span>
-<span class='line-number'>74</span>
-<span class='line-number'>75</span>
-<span class='line-number'>76</span>
-<span class='line-number'>77</span>
-</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">JsonUtil</span> <span class="o">{</span>
-</span><span class='line'>    <span class="kd">public</span> <span class="kd">static</span> <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">T</span> <span class="nf">getListFromJson</span><span class="o">(</span><span class="n">String</span> <span class="n">jsonString</span><span class="o">,</span> <span class="n">TypeToken</span> <span class="n">typeToken</span><span class="o">)</span> <span class="o">{</span>
-</span><span class='line'>        <span class="n">Gson</span> <span class="n">gson</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">Gson</span><span class="o">();</span>
-</span><span class='line'>        <span class="k">return</span> <span class="n">gson</span><span class="o">.</span><span class="na">fromJson</span><span class="o">(</span><span class="n">jsonString</span><span class="o">,</span> <span class="n">typeToken</span><span class="o">.</span><span class="na">getType</span><span class="o">());</span>
-</span><span class='line'>    <span class="o">}</span>
-</span><span class='line'>    <span class="kd">public</span> <span class="kd">static</span> <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">T</span> <span class="nf">getTFromJson</span><span class="o">(</span><span class="n">String</span> <span class="n">jsonString</span><span class="o">,</span> <span class="n">Class</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">t</span><span class="o">)</span> <span class="o">{</span>
-</span><span class='line'>        <span class="n">Gson</span> <span class="n">gson</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">Gson</span><span class="o">();</span>
-</span><span class='line'>        <span class="k">return</span> <span class="n">gson</span><span class="o">.</span><span class="na">fromJson</span><span class="o">(</span><span class="n">jsonString</span><span class="o">,</span> <span class="n">t</span><span class="o">);</span>
-</span><span class='line'>    <span class="o">}</span>
-</span><span class='line'>    <span class="kd">public</span> <span class="kd">static</span> <span class="n">ArrayList</span> <span class="nf">getArrayListMapFromJson</span><span class="o">(</span><span class="n">String</span> <span class="n">jsonString</span><span class="o">)</span> <span class="o">{</span>
-</span><span class='line'>        <span class="n">JsonParser</span> <span class="n">jsonParser</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">JsonParser</span><span class="o">();</span>
-</span><span class='line'>        <span class="n">Gson</span> <span class="n">gson</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">Gson</span><span class="o">();</span>
-</span><span class='line'>        <span class="n">JsonElement</span> <span class="n">jsonElement</span> <span class="o">=</span> <span class="n">jsonParser</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="n">jsonString</span><span class="o">);</span>
-</span><span class='line'>        <span class="n">Logs</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">jsonElement</span><span class="o">.</span><span class="na">isJsonArray</span><span class="o">()</span> <span class="o">+</span> <span class="s">&quot;   &quot;</span> <span class="o">+</span> <span class="n">jsonElement</span><span class="o">.</span><span class="na">isJsonObject</span><span class="o">());</span>
-</span><span class='line'>        <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Object</span><span class="o">&gt;&gt;</span> <span class="n">arrayList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Object</span><span class="o">&gt;&gt;();</span>
-</span><span class='line'>        <span class="k">if</span> <span class="o">(</span><span class="n">jsonElement</span><span class="o">.</span><span class="na">isJsonObject</span><span class="o">())</span> <span class="o">{</span>
-</span><span class='line'>            <span class="n">arrayList</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">gson</span><span class="o">.</span><span class="na">fromJson</span><span class="o">(</span><span class="n">jsonElement</span><span class="o">,</span> <span class="n">HashMap</span><span class="o">.</span><span class="na">class</span><span class="o">));</span>
-</span><span class='line'>        <span class="o">}</span> <span class="k">else</span> <span class="nf">if</span> <span class="o">(</span><span class="n">jsonElement</span><span class="o">.</span><span class="na">isJsonArray</span><span class="o">())</span> <span class="o">{</span>
-</span><span class='line'>            <span class="n">arrayList</span> <span class="o">=</span> <span class="n">getListFromJson</span><span class="o">(</span><span class="n">jsonString</span><span class="o">,</span> <span class="k">new</span> <span class="n">TypeToken</span><span class="o">&lt;</span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Object</span><span class="o">&gt;&gt;&gt;()</span> <span class="o">{</span>
-</span><span class='line'>            <span class="o">});</span>
-</span><span class='line'>        <span class="o">}</span>
-</span><span class='line'>        <span class="k">return</span> <span class="n">arrayList</span><span class="o">;</span>
-</span><span class='line'>    <span class="o">}</span>
-</span><span class='line'>    <span class="kd">public</span> <span class="kd">static</span> <span class="n">ArrayList</span> <span class="nf">getArrayListFromJson</span><span class="o">(</span><span class="n">String</span> <span class="n">jsonString</span><span class="o">)</span> <span class="o">{</span>
-</span><span class='line'>        <span class="n">JsonParser</span> <span class="n">jsonParser</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">JsonParser</span><span class="o">();</span>
-</span><span class='line'>        <span class="n">Gson</span> <span class="n">gson</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">Gson</span><span class="o">();</span>
-</span><span class='line'>        <span class="n">JsonElement</span> <span class="n">jsonElement</span> <span class="o">=</span> <span class="n">jsonParser</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="n">jsonString</span><span class="o">);</span>
-</span><span class='line'>        <span class="n">Logs</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">jsonElement</span><span class="o">.</span><span class="na">isJsonArray</span><span class="o">()</span> <span class="o">+</span> <span class="s">&quot;   &quot;</span> <span class="o">+</span> <span class="n">jsonElement</span><span class="o">.</span><span class="na">isJsonObject</span><span class="o">());</span>
-</span><span class='line'>        <span class="n">ArrayList</span> <span class="n">arrayList</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">ArrayList</span><span class="o">();</span>
-</span><span class='line'>        <span class="k">if</span> <span class="o">(</span><span class="n">jsonElement</span><span class="o">.</span><span class="na">isJsonObject</span><span class="o">())</span> <span class="o">{</span>
-</span><span class='line'>            <span class="n">arrayList</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">gson</span><span class="o">.</span><span class="na">fromJson</span><span class="o">(</span><span class="n">jsonElement</span><span class="o">,</span> <span class="n">HashMap</span><span class="o">.</span><span class="na">class</span><span class="o">));</span>
-</span><span class='line'>        <span class="o">}</span> <span class="k">else</span> <span class="nf">if</span> <span class="o">(</span><span class="n">jsonElement</span><span class="o">.</span><span class="na">isJsonArray</span><span class="o">())</span> <span class="o">{</span>
-</span><span class='line'>            <span class="n">arrayList</span> <span class="o">=</span> <span class="n">getListFromJson</span><span class="o">(</span><span class="n">jsonString</span><span class="o">,</span> <span class="k">new</span> <span class="n">TypeToken</span><span class="o">&lt;</span><span class="n">ArrayList</span><span class="o">&gt;()</span> <span class="o">{</span>
-</span><span class='line'>            <span class="o">});</span>
-</span><span class='line'>        <span class="o">}</span>
-</span><span class='line'>        <span class="k">return</span> <span class="n">arrayList</span><span class="o">;</span>
-</span><span class='line'>    <span class="o">}</span>
-</span><span class='line'>    <span class="kd">public</span> <span class="kd">static</span> <span class="n">Object</span> <span class="nf">getObjectListFromJson</span><span class="o">(</span><span class="n">String</span> <span class="n">jsonString</span><span class="o">)</span> <span class="o">{</span>
-</span><span class='line'>        <span class="n">Gson</span> <span class="n">gson</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">Gson</span><span class="o">();</span>
-</span><span class='line'>        <span class="n">Object</span> <span class="n">object</span> <span class="o">=</span> <span class="n">gson</span><span class="o">.</span><span class="na">fromJson</span><span class="o">(</span><span class="n">jsonString</span><span class="o">,</span> <span class="k">new</span> <span class="n">TypeToken</span><span class="o">&lt;</span><span class="n">List</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;&gt;()</span> <span class="o">{</span>
-</span><span class='line'>        <span class="o">}.</span><span class="na">getType</span><span class="o">());</span>
-</span><span class='line'>        <span class="k">return</span> <span class="n">object</span><span class="o">;</span>
-</span><span class='line'>    <span class="o">}</span>
-</span><span class='line'>    <span class="kd">public</span> <span class="kd">static</span> <span class="n">Object</span> <span class="nf">getObjectFromJson</span><span class="o">(</span><span class="n">String</span> <span class="n">jsonString</span><span class="o">)</span> <span class="o">{</span>
-</span><span class='line'>        <span class="n">Gson</span> <span class="n">gson</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">Gson</span><span class="o">();</span>
-</span><span class='line'>        <span class="n">Object</span> <span class="n">object</span> <span class="o">=</span> <span class="n">gson</span><span class="o">.</span><span class="na">fromJson</span><span class="o">(</span><span class="n">jsonString</span><span class="o">,</span> <span class="n">Object</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
-</span><span class='line'>        <span class="k">return</span> <span class="n">object</span><span class="o">;</span>
-</span><span class='line'>    <span class="o">}</span>
-</span><span class='line'>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">iteratorArrayList</span><span class="o">(</span><span class="n">ArrayList</span> <span class="n">arrayList</span><span class="o">)</span> <span class="o">{</span>
-</span><span class='line'>        <span class="n">Iterator</span> <span class="n">it1</span> <span class="o">=</span> <span class="n">arrayList</span><span class="o">.</span><span class="na">iterator</span><span class="o">();</span>
-</span><span class='line'>        <span class="k">while</span> <span class="o">(</span><span class="n">it1</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> <span class="o">{</span>
-</span><span class='line'>            <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-</span><span class='line'>            <span class="n">Iterator</span> <span class="n">it</span> <span class="o">=</span> <span class="o">((</span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;)</span> <span class="n">it1</span><span class="o">.</span><span class="na">next</span><span class="o">()).</span><span class="na">entrySet</span><span class="o">().</span><span class="na">iterator</span><span class="o">();</span>
-</span><span class='line'>            <span class="k">while</span> <span class="o">(</span><span class="n">it</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> <span class="o">{</span>
-</span><span class='line'>                <span class="n">i</span><span class="o">++;</span>
-</span><span class='line'>                <span class="n">Map</span><span class="o">.</span><span class="na">Entry</span> <span class="n">entry</span> <span class="o">=</span> <span class="o">(</span><span class="n">Map</span><span class="o">.</span><span class="na">Entry</span><span class="o">)</span> <span class="n">it</span><span class="o">.</span><span class="na">next</span><span class="o">();</span>
-</span><span class='line'>                <span class="n">Object</span> <span class="n">key</span> <span class="o">=</span> <span class="n">entry</span><span class="o">.</span><span class="na">getKey</span><span class="o">();</span>
-</span><span class='line'>                <span class="n">Object</span> <span class="n">value</span> <span class="o">=</span> <span class="n">entry</span><span class="o">.</span><span class="na">getValue</span><span class="o">();</span>
-</span><span class='line'>                <span class="n">Logs</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="s">&quot;key--&quot;</span> <span class="o">+</span> <span class="n">key</span> <span class="o">+</span> <span class="s">&quot;  value   &quot;</span> <span class="o">+</span> <span class="n">value</span> <span class="o">+</span> <span class="s">&quot;\n&quot;</span><span class="o">);</span>
-</span><span class='line'>            <span class="o">}</span>
-</span><span class='line'>        <span class="o">}</span>
-</span><span class='line'>    <span class="o">}</span>
-</span><span class='line'>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">iteratorList</span><span class="o">(</span><span class="n">List</span> <span class="n">inputList</span><span class="o">)</span> <span class="o">{</span>
-</span><span class='line'>        <span class="n">Iterator</span> <span class="n">it1</span> <span class="o">=</span> <span class="n">inputList</span><span class="o">.</span><span class="na">iterator</span><span class="o">();</span>
-</span><span class='line'>        <span class="k">while</span> <span class="o">(</span><span class="n">it1</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> <span class="o">{</span>
-</span><span class='line'>            <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-</span><span class='line'>            <span class="n">Iterator</span> <span class="n">it</span> <span class="o">=</span> <span class="o">((</span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;)</span> <span class="n">it1</span><span class="o">.</span><span class="na">next</span><span class="o">()).</span><span class="na">entrySet</span><span class="o">().</span><span class="na">iterator</span><span class="o">();</span>
-</span><span class='line'>            <span class="k">while</span> <span class="o">(</span><span class="n">it</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> <span class="o">{</span>
-</span><span class='line'>                <span class="n">i</span><span class="o">++;</span>
-</span><span class='line'>                <span class="n">Map</span><span class="o">.</span><span class="na">Entry</span> <span class="n">entry</span> <span class="o">=</span> <span class="o">(</span><span class="n">Map</span><span class="o">.</span><span class="na">Entry</span><span class="o">)</span> <span class="n">it</span><span class="o">.</span><span class="na">next</span><span class="o">();</span>
-</span><span class='line'>                <span class="n">Object</span> <span class="n">key</span> <span class="o">=</span> <span class="n">entry</span><span class="o">.</span><span class="na">getKey</span><span class="o">();</span>
-</span><span class='line'>                <span class="n">Object</span> <span class="n">value</span> <span class="o">=</span> <span class="n">entry</span><span class="o">.</span><span class="na">getValue</span><span class="o">();</span>
-</span><span class='line'>                <span class="n">Logs</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="s">&quot;key--&quot;</span> <span class="o">+</span> <span class="n">key</span> <span class="o">+</span> <span class="s">&quot;  value   &quot;</span> <span class="o">+</span> <span class="n">value</span> <span class="o">+</span> <span class="s">&quot;\n&quot;</span><span class="o">);</span>
-</span><span class='line'>            <span class="o">}</span>
-</span><span class='line'>        <span class="o">}</span>
-</span><span class='line'>    <span class="o">}</span>
-</span><span class='line'><span class="o">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
   
 
+<span class="byline author vcard">Posted by <span class="fn">MarshalChen</span></span>
 
-    </article>
-  
-  
-    <article>
       
-  <header>
+
+
+
+
+<time class='entry-date' datetime='2014-10-07T16:13:57+08:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>4:13 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ultimateandroid-android/'>ultimateandroid,android</a>
+  
+</span>
+
+
+    </p>
     
-      <h1 class="entry-title"><a href="/blog/2014/07/10/hacker-and-agile-development/">Hacker and Agile Development</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2014-07-10T10:49:09+08:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>10</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>10:49 am</span></time>
-        
-           | <a href="/blog/2014/07/10/hacker-and-agile-development/#disqus_thread"
-             data-disqus-identifier="http://cymcsg.github.io/blog/2014/07/10/hacker-and-agile-development/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>黑客和敏捷开发</h2>
-
-<p>前段时间读了一下Paul Graham的《黑客与画家》（Hackers and Painters: Big Ideas from the Computer Age），虽说这书已经出版良久了，但是读书往往是不讲究时间的，有收获就好。这本书是文集，相对内容比较散，针对的也并非是业内人士，所以不同人在不同角度可以把这本书看出千滋百味。但不管怎么说，我觉得绝大多数人，都可以从这本书中收获良多。本人是IT行业人士，仅从IT创业者角度谈谈自己的理解。</p>
-
-<p>”如果观察那些做出伟大作品的人，你会发现他们的共同点就是工作的非常艰苦。如果你工作的不艰苦，你可能正在浪费时间。 并非所有的痛苦都是有益的。世界上有有益的痛苦，也有无益的痛苦。你需要的是咬牙向前冲刺的痛苦，而不是脚背钉子扎破的痛苦。解决难题的痛苦对设计师有好处，但是对付挑剔的客户的痛苦或者对付质量低劣的建材的痛苦就是另一回事了。“</p>
-
-<p><strong>创业的辛苦是必然，但是绝不是随随便便的辛苦就能成功的。</strong>辛苦要用在往目标冲刺当中，与对手博弈之中，而不是无谓的的消费。而这也跟Hacker们所一贯追求的相符（本文中的Hacker与书中的Hacker所指一致，均是指有追求的Geekers）。对于创业过程来说，在搭好了开展事业所需要的基本的条件之后，就专心致志于自己的主业吧。而在主业中，也需要集中在一两个点重点突破，而不要总被别的事情所分散。</p>
-
-<p>那么具体到这一个过程，又有哪些可以注意的地方呢？</p>
-
-<p>首先，我们需要明白，"创业一直有一个潜规则： <strong>一旦创业了，很多事情是不由你的。</strong>创业前， 你只想努力2-3倍，从而得到相应的回报。 但真正创业后，你的竞争对手决定了你到底要有多辛苦。 而他们做出的决定都是一样的： 你能吃多少苦，我们就能吃多少苦，所以创业者才会很苦逼。这种情况下，你应该超越出来，从层次上高于你所在的环境。否则你势必将做得异常累。"那么，我们需要做的，就是要用超出对手的层次与境界与对手竞争。而这个竞争过程又分为战略和战术两个层次，两者相互配合，缺一不可。战略上要从产品本身，定位，核心功能等方面入手，要站的比对手高，看的比对手远。而要做到这点，有两个方面需要注意：一是确立好需要解决问题的初衷而不是为了Show技术，二是不要盲目的认为自己就是比别人想的远，而是要通过大量的验证来调整，而为了支持不断大量的调整，敏捷思想必不可少。在战术上，就要考虑到每一个细节的实现是否得当。而具体到IT创业的话，这个战术跟写程式就密不可分了。而写程式的相关内容，我们下面再说。</p>
-
-<p>第二，我们还需要明白，“人们真正注意到你的时候，不是第一眼看到你站在那里，而是发现过了这么久你居然还在那里。” <strong>有的时候不是你不美，而是你的美丽没有绽放太久就中道崩殂了。</strong>坚持的重要性无需多言，但是把握好坚持与变通的临界，这是一门艺术活。</p>
-
-<p>第三，在创业这个问题上，“<strong>致富的最好办法是创造财富(而不是掠夺)</strong>”。只要能够创造财富，就能获得财富。而掠夺财富的话，财富的持久性是值得怀疑的。“要更好的创造财富，你做的事情需要两点保证：可测量性，可放大性。硅谷的诀窍，可测量性来自小团队，可放大性来自开发新技术。”而针对小团队的测量创造财富的能力，和开发新技术来真正创造财富，无疑是小团队们的核心竞争力。</p>
-
-<p>现在再回到创业战术的问题上来，针对IT创业的话，具体的战术跟写程式十分密切。而为了能在战术上比对手快速而高效，选择非常敏捷的语言是个好主意。在书中为了能高效的写程式，作者对Lisp十分推崇。对此，我持部分赞同意见。<strong>对于Lisp语言的思想，无疑是现在程序设计语言的典范。但是针对具体的开发过程，直接使用Lisp未必真能非常高效。</strong> 第一，目前已经掌握Lisp语言的程序员相对小众，如果你本来没有掌握Lisp，为了Lisp而Lisp，没有几年的积累，很可能成为“只有宝剑而没有对应剑术”，所以是否使用Lisp得视情况而定。第二，不可否认，目前Lisp的库相对不够丰富，但是对此也有解决方法，就是使用支持Java类库Clojure。这也是我认为Clojure优于Common Lisp和Scheme的重要原因。第三点就是由于Lisp程序员由于太小众了，确实在想扩张的时候容易捉襟见肘。即使是Clojure在国内也丰富不到哪去，对此我的观点是，为什么不试试Ruby呢？当然本文并非语言之争，上述观点也只是鄙人浅见，是鄙人针对目前情况的看法而已，如果读者不认同，还请批评指正。</p>
-
-<p>应该来说，《黑客与画家》还是非常值得一读之书，相信你读了之后，也会有新的理解和体会。最后，我想用《黑客与画家》中的一句话结束文章：“画作永远没有完工的一天，你只是不再画下去而已。 ” 我们的生命，就是作画。</p>
+      <div class="sharing">
+  
+  
+  
 </div>
-  
-  
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/07/30/jsonutils-which-uses-gson/" title="Previous Post: JsonUtils which uses Gson">&laquo; JsonUtils which uses Gson</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
+  </section>
+
+</div>
+
 <aside class="sidebar">
   
     <section>
@@ -1291,6 +1089,7 @@ limitations under the License.
   
 </aside>
 
+
     </div>
   </div>
   <footer role="contentinfo"><p>
@@ -1305,7 +1104,10 @@ limitations under the License.
       var disqus_shortname = 'marshalchen';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://cymcsg.github.io/blog/2014/10/07/introduction-of-ultimateandroid/';
+        var disqus_url = 'http://cymcsg.github.io/blog/2014/10/07/introduction-of-ultimateandroid/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
