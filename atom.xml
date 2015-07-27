@@ -4,7 +4,7 @@
   <title><![CDATA[MarshalChen's Blog]]></title>
   <link href="http://cymcsg.github.io/atom.xml" rel="self"/>
   <link href="http://cymcsg.github.io/"/>
-  <updated>2015-07-24T15:32:57+08:00</updated>
+  <updated>2015-07-27T10:08:22+08:00</updated>
   <id>http://cymcsg.github.io/</id>
   <author>
     <name><![CDATA[MarshalChen]]></name>
@@ -20,14 +20,15 @@
     <id>http://cymcsg.github.io/blog/2014/10/07/introduction-of-ultimateandroid</id>
     <content type="html"><![CDATA[<h1>UltimateAndroid</h1>
 
-<h3>Version:0.5.0</h3>
+<h3>Version:0.7.1</h3>
 
-<p><a href="https://drone.io/github.com/cymcsg/UltimateAndroid/latest"><img src="https://drone.io/github.com/cymcsg/UltimateAndroid/status.png" alt="Build Status" /></a>
-<br></p>
+<h3>UltimateAndroid is a rapid development framework for developing apps</h3>
 
-<h3>UltimateAndroid is a rapid development framework for developing your apps</h3>
+<h3>Android快速开发框架  UltimateAndroid</h3>
 
-<h3>快速开发Android应用框架  UltimateAndroid</h3>
+<h4>Master branch:<a href="https://travis-ci.org/cymcsg/UltimateAndroid"><img src="https://travis-ci.org/cymcsg/UltimateAndroid.svg?branch=master" alt="Build Status" /></a></h4>
+
+<h4>Dev branch:<a href="https://travis-ci.org/cymcsg/UltimateAndroid"><img src="https://travis-ci.org/cymcsg/UltimateAndroid.svg?branch=dev" alt="Build Status" /></a></h4>
 
 <p><a href="#english_introduction">English Introduction</a></p>
 
@@ -41,17 +42,15 @@
 
 <p><a href="#sample">Try Demo</a></p>
 
-<h3>Update Ui for Material Design!</h3>
-
-<h3>Support Android Studio 1.0</h3>
+<h6>Update Ui for Material Design! Support Android Studio 1.0</h6>
 
 <h5>You can see javadoc <a href="http://blog.marshalchen.com/UltimateAndroid/ultimateandroiddoc/index.html">here</a></h5>
 
+<h5>There is an awesome recyclerview which contains pulling to refresh, loading more, swiping to dismiss, draging and drop, animations ,showing or hiding toolbar and floating action button when scrolling and many other features,you can try it <a href="https://github.com/cymcsg/UltimateRecyclerView">here UltimateRecyclerView</a>.</h5>
+
 <h5>Welcome to fork and pull request.</h5>
 
-<p>My Email is <code>cymcsg # gmail.com</code></p>
-
-<p><a href="https://github.com/cymcsg/UltimateAndroid/blob/master/updateLog.md">Update Log</a></p>
+<p>If you have some good idea about the framework,you can email to us or put your idea on the issue.My Email is <code>cymcsg # gmail.com</code></p>
 
 <h2 ><a name="english_introduction">Introduction</h2>
 
@@ -60,13 +59,19 @@
 
 <hr />
 
-<h5>UltimateAndroid is a rapid development framework for developing your apps.UltimateAndroid framework contains many features like View Injection,ORM,Asynchronous Networking and Image Loader,User scenario testing,over 100 Ui effects etc.And there are also many useful features like WebViewUtils,DaoUtils,Https Utils, CryptographyUtils etc.The framework will be added  more feature in the future.</h5>
+<h5>UltimateAndroid is a rapid development framework for developing  apps.UltimateAndroid framework contains many features like View Injection,ORM,Asynchronous Networking and Image Loader,User scenario testing,over 100 Ui effects etc.And there are also many useful features like WebViewUtils,DaoUtils,Https Utils,CryptographyUtils,FileUploadUtils etc.The framework will be added more feature in the future.</h5>
 
 <h5>The framework is like flask(a web development framework) which contains some other opensource project like <a href="https://github.com/JakeWharton/butterknife">Butter Knife</a>,<a href="https://github.com/loopj/android-async-http">Asynchronous Http Client for Android</a>, <a href="https://github.com/nostra13/Android-Universal-Image-Loader">Universal Image Loader for Android</a> and many other which I said at the end of Readme or in the updatelog.</h5>
 
 <p>Up to now,I have only write the demo of most parts of UI modules and View Injection.The demo is something boring,but you can see many kinds of UI modules.The DemoOfUi&rsquo;s screenshots are below,and you can download the apk directly.</p>
 
 <p><a href="#demo_of_ui">Demo of Ui&rsquo;s screenshot is here.</a></p>
+
+<h6>New for 0.7.0:</h6>
+
+<p>UltimateAndroidUi project now has four separate ui projects:widget,component,animations and lollipop. So if you want to only use part of the ui project you can simply use the separate project. However if you want to use all of them, you can also use the UltimateAndroidUi project.</p>
+
+<p><a href="https://github.com/cymcsg/UltimateAndroid/blob/master/updateLog.md">Update Log</a></p>
 
 <h2>Demo Manual</h2>
 
@@ -91,7 +96,7 @@
 </span><span class='line'>    <span class="o">}</span>
 </span><span class='line'><span class="n">dependencies</span> <span class="o">{</span>
 </span><span class='line'>    <span class="o">...</span>
-</span><span class='line'>    <span class="n">compile</span> <span class="s1">&#39;com.marshalchen.ultimateandroid:ultimateandroid:0.5.0&#39;</span>
+</span><span class='line'>    <span class="n">compile</span> <span class="s1">&#39;com.marshalchen.ultimateandroid:ultimateandroid:0.7.1&#39;</span>
 </span><span class='line'><span class="o">}</span>
 </span></code></pre></td></tr></table></div></figure>
 
@@ -110,20 +115,99 @@
 </span><span class='line'>    <span class="o">}</span>
 </span><span class='line'><span class="n">dependencies</span> <span class="o">{</span>
 </span><span class='line'>    <span class="o">...</span>
-</span><span class='line'>    <span class="n">compile</span> <span class="s1">&#39;com.marshalchen.ultimateandroid:ultimateandroidui:0.5.0&#39;</span>
+</span><span class='line'>    <span class="n">compile</span> <span class="s1">&#39;com.marshalchen.ultimateandroid:ultimateandroidui:0.7.0&#39;</span>
 </span><span class='line'><span class="o">}</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
+<p>Separate Ui framework:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='groovy'><span class='line'><span class="n">repositories</span> <span class="o">{</span>
+</span><span class='line'>        <span class="n">jcenter</span><span class="o">()</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'><span class="n">dependencies</span> <span class="o">{</span>
+</span><span class='line'>    <span class="o">...</span>
+</span><span class='line'>    <span class="n">compile</span> <span class="s1">&#39;com.marshalchen.ultimateandroid:ultimateandroiduiwidget:0.7.0&#39;</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='groovy'><span class='line'><span class="n">repositories</span> <span class="o">{</span>
+</span><span class='line'>        <span class="n">jcenter</span><span class="o">()</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'><span class="n">dependencies</span> <span class="o">{</span>
+</span><span class='line'>    <span class="o">...</span>
+</span><span class='line'>    <span class="n">compile</span> <span class="s1">&#39;com.marshalchen.ultimateandroid:ultimateandroiduicomponent:0.7.0&#39;</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='groovy'><span class='line'><span class="n">repositories</span> <span class="o">{</span>
+</span><span class='line'>        <span class="n">jcenter</span><span class="o">()</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'><span class="n">dependencies</span> <span class="o">{</span>
+</span><span class='line'>    <span class="o">...</span>
+</span><span class='line'>    <span class="n">compile</span> <span class="s1">&#39;com.marshalchen.ultimateandroid:ultimateandroiduianimation:0.7.0&#39;</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='groovy'><span class='line'><span class="n">repositories</span> <span class="o">{</span>
+</span><span class='line'>        <span class="n">jcenter</span><span class="o">()</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'><span class="n">dependencies</span> <span class="o">{</span>
+</span><span class='line'>    <span class="o">...</span>
+</span><span class='line'>    <span class="n">compile</span> <span class="s1">&#39;com.marshalchen.ultimateandroid:ultimateandroiduilollipop:0.7.0&#39;</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>UltimateAndroidUi project now has four separate ui projects:widget,component,animations and lollipop. So if you want to only use part of the ui project you can simply use the separate projects. However if you want to use all of them, you can also use the UltimateAndroidUi project(you can use four separate projects together either).</p>
+
 <h5>Normal way:</h5>
 
-<p>If you use gradle way and you want to edit it at the same time,you can use <code>Import Non-Android Studio Project</code>(need Android Studio 1.0).
-If you use normal way,you can pay attention that UltimateAndroid  depends on appcompat, UltimateAndroidUi  depends on UltimateAndroid,and the DemoOfUi is depends on UltimateAndroidUi. However,if you want to use UltimateAndroid without the UIModules,you can just depend on UltimateAndroid and this will make the app more flexible.</p>
+<p>If you want to use the framework and edit it at the same time,you can use <code>Import Project</code>(need Android Studio version above 1.0) and choose the <code>UltimateAndroidGradle</code> folder.</p>
+
+<p>If you want to use UltimateAndroid without the UIModules,you can just depend on UltimateAndroid and this will make the app more flexible.If you use normal way in eclipse,you can import the <code>UltimateAndroidNormal</code> folder and pay attention that UltimateAndroid  depends on appcompat, UltimateAndroidUi  depends on UltimateAndroid,and the DemoOfUi is depends on UltimateAndroidUi(Notice that the UltimateAndroidNormal project has been deprecated).</p>
 
 <p>2.As the function of View Injection which uses ButterKnife,you should config your IDE before you can compile the project.<strong><em>Most of  IDEs require additional configuration in order to enable annotation processing for Butter Knife,
 or you can see <a href="http://jakewharton.github.io/butterknife/ide-idea.html">IntelliJ IDEA Configuration for Butter Knife </a> or <a href="http://jakewharton.github.io/butterknife/ide-eclipse.html">Eclipse Configuration for butter Knife</a>.</em></strong></p>
 
-<p><strong><em>Notice:The latest version of the framework needs Android Sdk  of Version 21.If you use gradle project, you should use android studio which version should be 1.0.0+</em></strong></p>
+<p><strong><em>Notice:The latest version of the framework needs Android Sdk  of Version 21. If you use gradle project, you should use android studio which version should be 1.0.0+. If you use latest Android Studio ,you do not need set annotation processing</em></strong></p>
 
 <p>3.View Injection:</p>
 
@@ -206,7 +290,7 @@ or you can see <a href="http://jakewharton.github.io/butterknife/ide-idea.html">
 
 
 <p>4.Asynchronous Network:
-  Use asynchronous utils,you do not need to use an addtional Thread to visit network.</p>
+  Use asynchronous utils,you do not need to use an addtional Thread to visit network.It also contains file upload etc.</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -279,7 +363,7 @@ or you can see <a href="http://jakewharton.github.io/butterknife/ide-idea.html">
 <span class='line-number'>20</span>
 <span class='line-number'>21</span>
 <span class='line-number'>22</span>
-</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="n">HttpUtilsAsync</span><span class="o">.</span><span class="na">post</span><span class="o">(</span><span class="s">&quot;http://www.google.com&quot;</span><span class="o">,</span> <span class="k">new</span> <span class="nf">AsyncHttpResponseHandler</span><span class="o">()</span> <span class="o">{</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="n">HttpUtilsAsync</span><span class="o">.</span><span class="na">post</span><span class="o">(</span><span class="s">&quot;http://www.google.com&quot;</span><span class="o">,</span> <span class="n">params</span><span class="o">,</span><span class="k">new</span> <span class="nf">AsyncHttpResponseHandler</span><span class="o">()</span> <span class="o">{</span>
 </span><span class='line'>
 </span><span class='line'>  <span class="nd">@Override</span>
 </span><span class='line'>  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onStart</span><span class="o">()</span> <span class="o">{</span>
@@ -399,11 +483,7 @@ or you can see <a href="http://jakewharton.github.io/butterknife/ide-idea.html">
 
 <p>6.ORM:</p>
 
-<p> The Orm Module of the framework contains both <a href="https://github.com/greenrobot/greenDAO">GreenDao</a> and <a href="https://github.com/pardom/ActiveAndroid">ActiveRecord</a>.</p>
-
-<p> You can choose either of them freely.</p>
-
-<p>Please set the ides before you run the demo apps.</p>
+<p>You can read the documents of <a href="https://github.com/greenrobot/greenDAO">GreenDao</a></p>
 
 <h2>UI Modules</h2>
 
@@ -425,17 +505,21 @@ or you can see <a href="http://jakewharton.github.io/butterknife/ide-idea.html">
 
 <hr />
 
-<h4>框架目前主要包含的功能有View Injection,ORM,异步网络请求和图片加载，自动化脚本测试,磁盘LRU等功能.同时提供了类似于TripleDes、Webview快速设置、Cryptography处理、String处理,Https处理等常用工具类，还有超过100多种UI控件效果。并且这些功能正在逐步增加中。</h4>
+<h4>框架目前主要包含的功能有View Injection,ORM,异步网络请求和图片加载，自动化脚本测试,磁盘LRU等功能.同时提供了类似于TripleDes、Webview快速设置、Cryptography处理、String处理,Https处理，文件上传等常用工具类，还有超过100多种UI控件效果。并且这些功能正在逐步增加中。</h4>
 
-<h5>UltimateAndroid框架是如图flask框架（python）那样包含了许多其他的开源项目的框架，比如 <a href="https://github.com/JakeWharton/butterknife">Butter Knife</a>,<a href="https://github.com/loopj/android-async-http">Asynchronous Http Client for Android</a>, <a href="https://github.com/nostra13/Android-Universal-Image-Loader">Universal Image Loader for Android</a> 还有许多我在 Readme 或者 updatelog中提到的.</h5>
+<h5>UltimateAndroid框架是如同flask框架（python）那样包含了许多其他的开源项目的框架，比如 <a href="https://github.com/JakeWharton/butterknife">Butter Knife</a>,<a href="https://github.com/loopj/android-async-http">Asynchronous Http Client for Android</a>, <a href="https://github.com/nostra13/Android-Universal-Image-Loader">Universal Image Loader for Android</a> 还有许多我在 Readme 或者 updatelog中提到的.</h5>
 
 <p>欢迎各种fork与提意见。</p>
 
 <p>如果大家有需要的功能，欢迎随时提意见。</p>
 
-<p>使用DemoOfUI的时候,需要注意UltimateAndroid 依赖 appcompat.UltimateAndroidUi 依赖 UltimateAndroid.DemoOfUi 依赖 UltimateAndroidUi.如果你不需要使用UiModule的话，可以直接依赖UltimateAndroid，这样体积会更纤细。Demo的Apk文件可以直接下载使用.</p>
+<h6>0.7.0新版本：</h6>
+
+<p>UltimateUI 项目分拆成widget，component，animations，lollipop 4个子项目，如果你只需要部分UI效果的话，你可以只依赖这些子项目.如果你想使用多个种类的UI项目的话，也可以简单的依赖UltimateAndroidUi项目(当然，你也可以依赖4个子项目)。</p>
 
 <p><a href="#demo_of_ui">UI截图在这里</a></p>
+
+<p><a href="http://arccode.net/2015/02/03/UltimateAndroid-demo%E6%95%88%E6%9E%9C%E5%9B%BE%E6%96%87%E6%A1%A3-%E4%B8%80/">部分UI模块介绍</a>（感谢arccode）</p>
 
 <h5>Welcome to fork.</h5>
 
@@ -463,7 +547,7 @@ or you can see <a href="http://jakewharton.github.io/butterknife/ide-idea.html">
 </span><span class='line'>    <span class="o">}</span>
 </span><span class='line'><span class="n">dependencies</span> <span class="o">{</span>
 </span><span class='line'>    <span class="o">...</span>
-</span><span class='line'>    <span class="n">compile</span> <span class="s1">&#39;com.marshalchen.ultimateandroid:ultimateandroid:0.5.0&#39;</span>
+</span><span class='line'>    <span class="n">compile</span> <span class="s1">&#39;com.marshalchen.ultimateandroid:ultimateandroid:0.7.1&#39;</span>
 </span><span class='line'><span class="o">}</span>
 </span></code></pre></td></tr></table></div></figure>
 
@@ -482,18 +566,88 @@ or you can see <a href="http://jakewharton.github.io/butterknife/ide-idea.html">
 </span><span class='line'>    <span class="o">}</span>
 </span><span class='line'><span class="n">dependencies</span> <span class="o">{</span>
 </span><span class='line'>    <span class="o">...</span>
-</span><span class='line'>    <span class="n">compile</span> <span class="s1">&#39;com.marshalchen.ultimateandroid:ultimateandroidui:0.5.0&#39;</span>
+</span><span class='line'>    <span class="n">compile</span> <span class="s1">&#39;com.marshalchen.ultimateandroid:ultimateandroidui:0.7.0&#39;</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>分离的UI项目:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='groovy'><span class='line'><span class="n">repositories</span> <span class="o">{</span>
+</span><span class='line'>        <span class="n">jcenter</span><span class="o">()</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'><span class="n">dependencies</span> <span class="o">{</span>
+</span><span class='line'>    <span class="o">...</span>
+</span><span class='line'>    <span class="n">compile</span> <span class="s1">&#39;com.marshalchen.ultimateandroid:ultimateandroiduiwidget:0.7.0&#39;</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='groovy'><span class='line'><span class="n">repositories</span> <span class="o">{</span>
+</span><span class='line'>        <span class="n">jcenter</span><span class="o">()</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'><span class="n">dependencies</span> <span class="o">{</span>
+</span><span class='line'>    <span class="o">...</span>
+</span><span class='line'>    <span class="n">compile</span> <span class="s1">&#39;com.marshalchen.ultimateandroid:ultimateandroiduicomponent:0.7.0&#39;</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='groovy'><span class='line'><span class="n">repositories</span> <span class="o">{</span>
+</span><span class='line'>        <span class="n">jcenter</span><span class="o">()</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'><span class="n">dependencies</span> <span class="o">{</span>
+</span><span class='line'>    <span class="o">...</span>
+</span><span class='line'>    <span class="n">compile</span> <span class="s1">&#39;com.marshalchen.ultimateandroid:ultimateandroiduilollipop:0.7.0&#39;</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='groovy'><span class='line'><span class="n">repositories</span> <span class="o">{</span>
+</span><span class='line'>        <span class="n">jcenter</span><span class="o">()</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'><span class="n">dependencies</span> <span class="o">{</span>
+</span><span class='line'>    <span class="o">...</span>
+</span><span class='line'>    <span class="n">compile</span> <span class="s1">&#39;com.marshalchen.ultimateandroid:ultimateandroiduianimation:0.7.0&#39;</span>
 </span><span class='line'><span class="o">}</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
 <h5>Normal way:</h5>
 
-<p>1.传统的library和gradle 的library在不同的文件夹中。如果你使用gradle方式,你可以拷贝 &ldquo;ultimateandroid.aar&rdquo; 到你的项目中 ，添加<code> compile(name:'ultimateandroid', ext:'aar')</code>到gradle file中 .如果你使用gradle方式，并且想同时修改框架，可以用android studio的<code>Import Non-Android Studio Project</code>(需要Android Studio1.0)。如果使用普通方式，需要注意UltimateAndroid 依赖 appcompat.UltimateAndroidUi 依赖 UltimateAndroid.DemoOfUi 依赖 UltimateAndroidUi.如果你不需要使用UiModule的话，可以直接依赖UltimateAndroid，这样体积会更纤细。</p>
+<p>1.传统的library和gradle 的library在不同的文件夹中。如果你使用gradle方式,你可以拷贝 &ldquo;ultimateandroid.aar&rdquo; 到你的项目中 ，添加<code> compile(name:'ultimateandroid', ext:'aar')</code>到gradle file中 .如果你使用gradle方式，并且想同时修改框架，可以用android studio的<code>Import Studio Project</code>(需要Android Studio1.0以上版本) 导入<code>UltimateAndroidGradle</code>文件夹。如果使用Eclipse的话，需要注意UltimateAndroid 依赖 appcompat.UltimateAndroidUi 依赖 UltimateAndroid.DemoOfUi 依赖 UltimateAndroidUi.如果你不需要使用UiModule的话，可以直接依赖UltimateAndroid，这样体积会更纤细。</p>
 
 <p>2.Demo的Apk文件可以直接下载使用.由于框架使用了View Injection，<strong>大部分IDE需要开启annotation的编译（使用了Butter Knife），如果不清楚如何开启可以看一下<a href="http://jakewharton.github.io/butterknife/ide-idea.html">IntelliJ IDEA Configuration for Butter Knife </a> or <a href="http://jakewharton.github.io/butterknife/ide-eclipse.html">Eclipse Configuration for butter Knife</a>.</strong></p>
 
-<p><strong><em>注意：UltimateAndroid框架需要API21版本的Android SDK来进行编译,如果使用了gradle的project，android studio的版本需要大于1.0.0</em></strong></p>
+<p><strong><em>注意：UltimateAndroid框架需要API21版本的Android SDK来进行编译,如果使用了gradle的project，android studio的版本需要大于1.0.0如果你用的是最新版的Android Studio，你不需要显式的开启annotation processing了</em></strong></p>
 
 <p>3.视图注入：</p>
 
@@ -576,7 +730,7 @@ or you can see <a href="http://jakewharton.github.io/butterknife/ide-idea.html">
 
 
 <p>4.异步网络请求:
-  使用异步网络请求工具，你不需要在额外的声明Thread来进行网络请求。</p>
+  使用异步网络请求工具，你不需要在额外的声明Thread来进行网络请求。同时也包括文件上传等内容。</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -769,9 +923,7 @@ or you can see <a href="http://jakewharton.github.io/butterknife/ide-idea.html">
 
 <p>6.ORM:</p>
 
-<p> Orm模块包括<a href="https://github.com/greenrobot/greenDAO">GreenDao</a> and <a href="https://github.com/pardom/ActiveAndroid">ActiveRecord</a>.</p>
-
-<p> 你可以自由选择两者中的一个。</p>
+<p> 可以查看Greendao的文档 ：<a href="https://github.com/greenrobot/greenDAO">GreenDao</a></p>
 
 <h2>UI 模块</h2>
 
@@ -795,34 +947,38 @@ or you can see <a href="http://jakewharton.github.io/butterknife/ide-idea.html">
 
 <p>Some stuff is just implemented to showcase its functionality and so they are not optimized for performance and they are not done with &ldquo;best practice&rdquo; in mind.</p>
 
-<h2 ><a name="demo_of_ui">Some  Demo of Ui:</h2>
+<h2 ><a name="demo_of_ui">Screen Shot:</h2>
 
 
 <p></p>
 
-<p><img src="http://blog.marshalchen.com/images/tutorial2-12.gif" alt="tutorials2" /></p>
+<p><img src="https://bytebucket.org/marshalchen/images/raw/0bed76fcdecb604afab39df9ce1a509af4b6f995/ultimaterecyclerview/ultimate_recyclerview6.gif" alt="tutorials2" /></p>
 
-<p><img src="http://blog.marshalchen.com/images/tutorial2-1.gif" alt="tutorials2" /></p>
+<p><img src="https://bytebucket.org/marshalchen/images/raw/e943b6016246e1f3c2085a24e1a773e0107775b3/ultimateandroid/tutorial2-14.gif" alt="tutorials2" /></p>
 
-<p><img src="http://blog.marshalchen.com/images/tutorial2-2.gif" alt="tutorials2" /></p>
+<p><img src="https://bytebucket.org/marshalchen/images/raw/e943b6016246e1f3c2085a24e1a773e0107775b3/ultimateandroid/tutorial2-1.gif" alt="tutorials2" /></p>
 
-<p><img src="http://blog.marshalchen.com/images/tutorial2-3.gif" alt="tutorials2" /></p>
+<p><img src="https://bytebucket.org/marshalchen/images/raw/e943b6016246e1f3c2085a24e1a773e0107775b3/ultimateandroid/tutorial2-2.gif" alt="tutorials2" /></p>
 
-<p><img src="http://blog.marshalchen.com/images/tutorial2-4.gif" alt="tutorials2" /></p>
+<p><img src="https://bytebucket.org/marshalchen/images/raw/e943b6016246e1f3c2085a24e1a773e0107775b3/ultimateandroid/tutorial2-3.gif" alt="tutorials2" /></p>
 
-<p><img src="http://blog.marshalchen.com/images/tutorial2-5.gif" alt="tutorials2" /></p>
+<p><img src="https://bytebucket.org/marshalchen/images/raw/e943b6016246e1f3c2085a24e1a773e0107775b3/ultimateandroid/tutorial2-4.gif" alt="tutorials2" /></p>
 
-<p><img src="http://blog.marshalchen.com/images/tutorial2-6.gif" alt="tutorials2" /></p>
+<p><img src="https://bytebucket.org/marshalchen/images/raw/e943b6016246e1f3c2085a24e1a773e0107775b3/ultimateandroid/tutorial2-5.gif" alt="tutorials2" /></p>
 
-<p><img src="http://blog.marshalchen.com/images/tutorial2-7.gif" alt="tutorials2" /></p>
+<p><img src="https://bytebucket.org/marshalchen/images/raw/e943b6016246e1f3c2085a24e1a773e0107775b3/ultimateandroid/tutorial2-6.gif" alt="tutorials2" /></p>
 
-<p><img src="http://blog.marshalchen.com/images/tutorial2-8.gif" alt="tutorials2" /></p>
+<p><img src="https://bytebucket.org/marshalchen/images/raw/e943b6016246e1f3c2085a24e1a773e0107775b3/ultimateandroid/tutorial2-7.gif" alt="tutorials2" /></p>
 
-<p><img src="http://blog.marshalchen.com/images/tutorial2-9.gif" alt="tutorials2" /></p>
+<p><img src="https://bytebucket.org/marshalchen/images/raw/e943b6016246e1f3c2085a24e1a773e0107775b3/ultimateandroid/tutorial2-8.gif" alt="tutorials2" /></p>
 
-<p><img src="http://blog.marshalchen.com/images/tutorial2-10.gif" alt="tutorials2" /></p>
+<p><img src="https://bytebucket.org/marshalchen/images/raw/e943b6016246e1f3c2085a24e1a773e0107775b3/ultimateandroid/tutorial2-9.gif" alt="tutorials2" /></p>
 
-<p><img src="http://blog.marshalchen.com/images/tutorial2-11.gif" alt="tutorials2" /></p>
+<p><img src="https://bytebucket.org/marshalchen/images/raw/e943b6016246e1f3c2085a24e1a773e0107775b3/ultimateandroid/tutorial2-10.gif" alt="tutorials2" /></p>
+
+<p><img src="https://bytebucket.org/marshalchen/images/raw/e943b6016246e1f3c2085a24e1a773e0107775b3/ultimateandroid/tutorial2-11.gif" alt="tutorials2" /></p>
+
+<p><img src="https://bytebucket.org/marshalchen/images/raw/e943b6016246e1f3c2085a24e1a773e0107775b3/ultimateandroid/tutorial2-12.gif" alt="tutorials2" /></p>
 
 <p><br></p>
 
@@ -873,7 +1029,7 @@ The opensource program which I use:</p>
 
 <p>16.<a href="https://github.com/daimajia/AndroidViewAnimations">Android View Animations</a></p>
 
-<p>17.<a href="https://github.com/Trinea/android-common">Trinea</a></p>
+<p>17.<a href="https://github.com/Trinea/android-common">android-common</a></p>
 
 <p>18.<a href="https://github.com/nhaarman/ListViewAnimations">ListviewAnimations</a></p>
 
@@ -886,6 +1042,8 @@ The opensource program which I use:</p>
 <p>22.<a href="https://github.com/Todd-Davies/ProgressWheel">FaceCrop</a></p>
 
 <p>23.<a href="https://github.com/flavioarfaria/KenBurnsView">KenBurns</a></p>
+
+<p>24.<a href="https://github.com/daimajia/AndroidSwipeLayout">AndroidSwipeLayout</a></p>
 
 <p>There are some other projects which I write in <a href="https://github.com/cymcsg/UltimateAndroid/blob/master/updateLog.md">Update Log</a>.</p>
 
