@@ -8,16 +8,19 @@ categories: UltimateAndroid,Android
 UltimateAndroid
 ==========================
 
-###Version:0.5.0
+###Version:0.7.1
 
 
-[![Build Status](https://drone.io/github.com/cymcsg/UltimateAndroid/status.png)](https://drone.io/github.com/cymcsg/UltimateAndroid/latest)
-<br>
 
-###UltimateAndroid is a rapid development framework for developing your apps
+###UltimateAndroid is a rapid development framework for developing apps
 
 
-### 快速开发Android应用框架  UltimateAndroid
+### Android快速开发框架  UltimateAndroid
+
+####Master branch:[![Build Status](https://travis-ci.org/cymcsg/UltimateAndroid.svg?branch=master)](https://travis-ci.org/cymcsg/UltimateAndroid)
+
+####Dev branch:[![Build Status](https://travis-ci.org/cymcsg/UltimateAndroid.svg?branch=dev)](https://travis-ci.org/cymcsg/UltimateAndroid)
+
 
 [English Introduction](#english_introduction)
 
@@ -32,24 +35,26 @@ UltimateAndroid
 [Try Demo](#sample)
 
 
-###Update Ui for Material Design!
-### Support Android Studio 1.0
+######Update Ui for Material Design! Support Android Studio 1.0
+
 ##### You can see javadoc [here](http://blog.marshalchen.com/UltimateAndroid/ultimateandroiddoc/index.html)
+
+#####There is an awesome recyclerview which contains pulling to refresh, loading more, swiping to dismiss, draging and drop, animations ,showing or hiding toolbar and floating action button when scrolling and many other features,you can try it [here UltimateRecyclerView](https://github.com/cymcsg/UltimateRecyclerView).
 
 
 
 #####Welcome to fork and pull request.
-My Email is ``cymcsg # gmail.com``
+
+If you have some good idea about the framework,you can email to us or put your idea on the issue.My Email is ``cymcsg # gmail.com``
 
 
-[Update Log](https://github.com/cymcsg/UltimateAndroid/blob/master/updateLog.md)
 
 
 <h2 ><a name="english_introduction">Introduction</h2>  
 
 ---
 
-#####UltimateAndroid is a rapid development framework for developing your apps.UltimateAndroid framework contains many features like View Injection,ORM,Asynchronous Networking and Image Loader,User scenario testing,over 100 Ui effects etc.And there are also many useful features like WebViewUtils,DaoUtils,Https Utils, CryptographyUtils etc.The framework will be added  more feature in the future. 
+#####UltimateAndroid is a rapid development framework for developing  apps.UltimateAndroid framework contains many features like View Injection,ORM,Asynchronous Networking and Image Loader,User scenario testing,over 100 Ui effects etc.And there are also many useful features like WebViewUtils,DaoUtils,Https Utils,CryptographyUtils,FileUploadUtils etc.The framework will be added more feature in the future. 
 
 
 
@@ -61,6 +66,10 @@ Up to now,I have only write the demo of most parts of UI modules and View Inject
 
 [Demo of Ui's screenshot is here.](#demo_of_ui)
 
+######New for 0.7.0:
+UltimateAndroidUi project now has four separate ui projects:widget,component,animations and lollipop. So if you want to only use part of the ui project you can simply use the separate project. However if you want to use all of them, you can also use the UltimateAndroidUi project.
+
+[Update Log](https://github.com/cymcsg/UltimateAndroid/blob/master/updateLog.md)
 
 
 
@@ -75,35 +84,79 @@ Demo Manual
 #####Gradle way(Recommended):
 
 Core framework:
-```groovy
+``` groovy
 repositories {
         jcenter()
     }
 dependencies {
     ...
-    compile 'com.marshalchen.ultimateandroid:ultimateandroid:0.5.0'
+    compile 'com.marshalchen.ultimateandroid:ultimateandroid:0.7.1'
 }
 ```
 Ui framework:
-```groovy
+``` groovy
 repositories {
         jcenter()
     }
 dependencies {
     ...
-    compile 'com.marshalchen.ultimateandroid:ultimateandroidui:0.5.0'
+    compile 'com.marshalchen.ultimateandroid:ultimateandroidui:0.7.0'
+}
+```
+
+Separate Ui framework:
+``` groovy
+repositories {
+        jcenter()
+    }
+dependencies {
+    ...
+    compile 'com.marshalchen.ultimateandroid:ultimateandroiduiwidget:0.7.0'
+}
+```
+
+``` groovy
+repositories {
+        jcenter()
+    }
+dependencies {
+    ...
+    compile 'com.marshalchen.ultimateandroid:ultimateandroiduicomponent:0.7.0'
+}
+```
+
+``` groovy
+repositories {
+        jcenter()
+    }
+dependencies {
+    ...
+    compile 'com.marshalchen.ultimateandroid:ultimateandroiduianimation:0.7.0'
+}
+```
+
+``` groovy
+repositories {
+        jcenter()
+    }
+dependencies {
+    ...
+    compile 'com.marshalchen.ultimateandroid:ultimateandroiduilollipop:0.7.0'
 }
 ```
 
 
+
+UltimateAndroidUi project now has four separate ui projects:widget,component,animations and lollipop. So if you want to only use part of the ui project you can simply use the separate projects. However if you want to use all of them, you can also use the UltimateAndroidUi project(you can use four separate projects together either).
 #####Normal way:
-If you use gradle way and you want to edit it at the same time,you can use ``Import Non-Android Studio Project``(need Android Studio 1.0).
-If you use normal way,you can pay attention that UltimateAndroid  depends on appcompat, UltimateAndroidUi  depends on UltimateAndroid,and the DemoOfUi is depends on UltimateAndroidUi. However,if you want to use UltimateAndroid without the UIModules,you can just depend on UltimateAndroid and this will make the app more flexible.
+If you want to use the framework and edit it at the same time,you can use ``Import Project``(need Android Studio version above 1.0) and choose the ``UltimateAndroidGradle`` folder.
+
+If you want to use UltimateAndroid without the UIModules,you can just depend on UltimateAndroid and this will make the app more flexible.If you use normal way in eclipse,you can import the ``UltimateAndroidNormal`` folder and pay attention that UltimateAndroid  depends on appcompat, UltimateAndroidUi  depends on UltimateAndroid,and the DemoOfUi is depends on UltimateAndroidUi(Notice that the UltimateAndroidNormal project has been deprecated). 
 
 2.As the function of View Injection which uses ButterKnife,you should config your IDE before you can compile the project.***Most of  IDEs require additional configuration in order to enable annotation processing for Butter Knife,
 or you can see [IntelliJ IDEA Configuration for Butter Knife ][101] or [Eclipse Configuration for butter Knife][102].***
 
-***Notice:The latest version of the framework needs Android Sdk  of Version 21.If you use gradle project, you should use android studio which version should be 1.0.0+***
+***Notice:The latest version of the framework needs Android Sdk  of Version 21. If you use gradle project, you should use android studio which version should be 1.0.0+. If you use latest Android Studio ,you do not need set annotation processing***
 
 3.View Injection:
 
@@ -152,7 +205,7 @@ public class MyAdapter extends BaseAdapter {
 ```
 
 4.Asynchronous Network:
-  Use asynchronous utils,you do not need to use an addtional Thread to visit network.
+  Use asynchronous utils,you do not need to use an addtional Thread to visit network.It also contains file upload etc.
 
 ``` java
 HttpUtilsAsync.get("http://www.google.com", new AsyncHttpResponseHandler() {
@@ -182,7 +235,7 @@ HttpUtilsAsync.get("http://www.google.com", new AsyncHttpResponseHandler() {
 Post request:
 
 ``` java
-HttpUtilsAsync.post("http://www.google.com", new AsyncHttpResponseHandler() {
+HttpUtilsAsync.post("http://www.google.com", params,new AsyncHttpResponseHandler() {
 
   @Override
   public void onStart() {
@@ -264,12 +317,7 @@ String imageUri = "drawable://" + R.drawable.image; // from drawables (only imag
 
 6.ORM:
 
- The Orm Module of the framework contains both [GreenDao](https://github.com/greenrobot/greenDAO) and [ActiveRecord](https://github.com/pardom/ActiveAndroid).
-
- You can choose either of them freely.
-
-
-Please set the ides before you run the demo apps.
+You can read the documents of [GreenDao](https://github.com/greenrobot/greenDAO) 
 
 
 
@@ -290,18 +338,20 @@ Please set the ides before you run the demo apps.
  <h2 ><a name="chinese_introduction"></a>简介</h2>
 
 ---
-####框架目前主要包含的功能有View Injection,ORM,异步网络请求和图片加载，自动化脚本测试,磁盘LRU等功能.同时提供了类似于TripleDes、Webview快速设置、Cryptography处理、String处理,Https处理等常用工具类，还有超过100多种UI控件效果。并且这些功能正在逐步增加中。
+####框架目前主要包含的功能有View Injection,ORM,异步网络请求和图片加载，自动化脚本测试,磁盘LRU等功能.同时提供了类似于TripleDes、Webview快速设置、Cryptography处理、String处理,Https处理，文件上传等常用工具类，还有超过100多种UI控件效果。并且这些功能正在逐步增加中。
 
-#####UltimateAndroid框架是如图flask框架（python）那样包含了许多其他的开源项目的框架，比如 [Butter Knife][1],[Asynchronous Http Client for Android][2], [Universal Image Loader for Android][3] 还有许多我在 Readme 或者 updatelog中提到的.
+#####UltimateAndroid框架是如同flask框架（python）那样包含了许多其他的开源项目的框架，比如 [Butter Knife][1],[Asynchronous Http Client for Android][2], [Universal Image Loader for Android][3] 还有许多我在 Readme 或者 updatelog中提到的.
 
 欢迎各种fork与提意见。
 
 如果大家有需要的功能，欢迎随时提意见。
 
-使用DemoOfUI的时候,需要注意UltimateAndroid 依赖 appcompat.UltimateAndroidUi 依赖 UltimateAndroid.DemoOfUi 依赖 UltimateAndroidUi.如果你不需要使用UiModule的话，可以直接依赖UltimateAndroid，这样体积会更纤细。Demo的Apk文件可以直接下载使用.
+######0.7.0新版本：
+UltimateUI 项目分拆成widget，component，animations，lollipop 4个子项目，如果你只需要部分UI效果的话，你可以只依赖这些子项目.如果你想使用多个种类的UI项目的话，也可以简单的依赖UltimateAndroidUi项目(当然，你也可以依赖4个子项目)。
 
 [UI截图在这里](#demo_of_ui)
 
+[部分UI模块介绍](http://arccode.net/2015/02/03/UltimateAndroid-demo%E6%95%88%E6%9E%9C%E5%9B%BE%E6%96%87%E6%A1%A3-%E4%B8%80/)（感谢arccode）
 
 #####Welcome to fork.
 
@@ -319,34 +369,71 @@ Demo依赖于appcompat 和 UltimateAndroid，你可以在IDE或者配置文件�
 #####Gradle way(Recommend):
 
 Main framework:
-```groovy
+``` groovy
 repositories {
         jcenter()
     }
 dependencies {
     ...
-    compile 'com.marshalchen.ultimateandroid:ultimateandroid:0.5.0'
+    compile 'com.marshalchen.ultimateandroid:ultimateandroid:0.7.1'
 }
 ```
 Ui framework:
-```groovy
+``` groovy
 repositories {
         jcenter()
     }
 dependencies {
     ...
-    compile 'com.marshalchen.ultimateandroid:ultimateandroidui:0.5.0'
+    compile 'com.marshalchen.ultimateandroid:ultimateandroidui:0.7.0'
 }
 ```
 
+分离的UI项目:
+``` groovy
+repositories {
+        jcenter()
+    }
+dependencies {
+    ...
+    compile 'com.marshalchen.ultimateandroid:ultimateandroiduiwidget:0.7.0'
+}
+```
+``` groovy
+repositories {
+        jcenter()
+    }
+dependencies {
+    ...
+    compile 'com.marshalchen.ultimateandroid:ultimateandroiduicomponent:0.7.0'
+}
+```
+``` groovy
+repositories {
+        jcenter()
+    }
+dependencies {
+    ...
+    compile 'com.marshalchen.ultimateandroid:ultimateandroiduilollipop:0.7.0'
+}
+```
+``` groovy
+repositories {
+        jcenter()
+    }
+dependencies {
+    ...
+    compile 'com.marshalchen.ultimateandroid:ultimateandroiduianimation:0.7.0'
+}
+```
 
 #####Normal way:
 
-1.传统的library和gradle 的library在不同的文件夹中。如果你使用gradle方式,你可以拷贝 "ultimateandroid.aar" 到你的项目中 ，添加``  compile(name:'ultimateandroid', ext:'aar')``到gradle file中 .如果你使用gradle方式，并且想同时修改框架，可以用android studio的``Import Non-Android Studio Project``(需要Android Studio1.0)。如果使用普通方式，需要注意UltimateAndroid 依赖 appcompat.UltimateAndroidUi 依赖 UltimateAndroid.DemoOfUi 依赖 UltimateAndroidUi.如果你不需要使用UiModule的话，可以直接依赖UltimateAndroid，这样体积会更纤细。
+1.传统的library和gradle 的library在不同的文件夹中。如果你使用gradle方式,你可以拷贝 "ultimateandroid.aar" 到你的项目中 ，添加``  compile(name:'ultimateandroid', ext:'aar')``到gradle file中 .如果你使用gradle方式，并且想同时修改框架，可以用android studio的``Import Studio Project``(需要Android Studio1.0以上版本) 导入``UltimateAndroidGradle``文件夹。如果使用Eclipse的话，需要注意UltimateAndroid 依赖 appcompat.UltimateAndroidUi 依赖 UltimateAndroid.DemoOfUi 依赖 UltimateAndroidUi.如果你不需要使用UiModule的话，可以直接依赖UltimateAndroid，这样体积会更纤细。
 
 2.Demo的Apk文件可以直接下载使用.由于框架使用了View Injection，**大部分IDE需要开启annotation的编译（使用了Butter Knife），如果不清楚如何开启可以看一下[IntelliJ IDEA Configuration for Butter Knife ][101] or [Eclipse Configuration for butter Knife][102].**
 
-***注意：UltimateAndroid框架需要API21版本的Android SDK来进行编译,如果使用了gradle的project，android studio的版本需要大于1.0.0***
+***注意：UltimateAndroid框架需要API21版本的Android SDK来进行编译,如果使用了gradle的project，android studio的版本需要大于1.0.0如果你用的是最新版的Android Studio，你不需要显式的开启annotation processing了***
 
 3.视图注入：
 
@@ -395,7 +482,7 @@ public class MyAdapter extends BaseAdapter {
 ```
 
 4.异步网络请求:
-  使用异步网络请求工具，你不需要在额外的声明Thread来进行网络请求。
+  使用异步网络请求工具，你不需要在额外的声明Thread来进行网络请求。同时也包括文件上传等内容。
 
 ``` java
 HttpUtilsAsync.get("http://www.google.com", new AsyncHttpResponseHandler() {
@@ -507,9 +594,7 @@ String imageUri = "drawable://" + R.drawable.image; // from drawables (only imag
 
 6.ORM:
 
- Orm模块包括[GreenDao](https://github.com/greenrobot/greenDAO) and [ActiveRecord](https://github.com/pardom/ActiveAndroid).
-
- 你可以自由选择两者中的一个。
+ 可以查看Greendao的文档 ：[GreenDao](https://github.com/greenrobot/greenDAO) 
 
 
 ##UI 模块
@@ -533,32 +618,36 @@ Warning
 Some stuff is just implemented to showcase its functionality and so they are not optimized for performance and they are not done with "best practice" in mind.
 
 
-<h2 ><a name="demo_of_ui">Some  Demo of Ui:</h2>  
+<h2 ><a name="demo_of_ui">Screen Shot:</h2>  
 
-![tutorials2](http://blog.marshalchen.com/images/tutorial2-12.gif)
+![tutorials2](https://bytebucket.org/marshalchen/images/raw/0bed76fcdecb604afab39df9ce1a509af4b6f995/ultimaterecyclerview/ultimate_recyclerview6.gif)
 
 
-![tutorials2](http://blog.marshalchen.com/images/tutorial2-1.gif)
+![tutorials2](https://bytebucket.org/marshalchen/images/raw/e943b6016246e1f3c2085a24e1a773e0107775b3/ultimateandroid/tutorial2-14.gif)
 
-![tutorials2](http://blog.marshalchen.com/images/tutorial2-2.gif)
+![tutorials2](https://bytebucket.org/marshalchen/images/raw/e943b6016246e1f3c2085a24e1a773e0107775b3/ultimateandroid/tutorial2-1.gif)
 
-![tutorials2](http://blog.marshalchen.com/images/tutorial2-3.gif)
+![tutorials2](https://bytebucket.org/marshalchen/images/raw/e943b6016246e1f3c2085a24e1a773e0107775b3/ultimateandroid/tutorial2-2.gif)
 
-![tutorials2](http://blog.marshalchen.com/images/tutorial2-4.gif)
+![tutorials2](https://bytebucket.org/marshalchen/images/raw/e943b6016246e1f3c2085a24e1a773e0107775b3/ultimateandroid/tutorial2-3.gif)
 
-![tutorials2](http://blog.marshalchen.com/images/tutorial2-5.gif)
+![tutorials2](https://bytebucket.org/marshalchen/images/raw/e943b6016246e1f3c2085a24e1a773e0107775b3/ultimateandroid/tutorial2-4.gif)
 
-![tutorials2](http://blog.marshalchen.com/images/tutorial2-6.gif)
+![tutorials2](https://bytebucket.org/marshalchen/images/raw/e943b6016246e1f3c2085a24e1a773e0107775b3/ultimateandroid/tutorial2-5.gif)
 
-![tutorials2](http://blog.marshalchen.com/images/tutorial2-7.gif)
+![tutorials2](https://bytebucket.org/marshalchen/images/raw/e943b6016246e1f3c2085a24e1a773e0107775b3/ultimateandroid/tutorial2-6.gif)
 
-![tutorials2](http://blog.marshalchen.com/images/tutorial2-8.gif)
+![tutorials2](https://bytebucket.org/marshalchen/images/raw/e943b6016246e1f3c2085a24e1a773e0107775b3/ultimateandroid/tutorial2-7.gif)
 
-![tutorials2](http://blog.marshalchen.com/images/tutorial2-9.gif)
+![tutorials2](https://bytebucket.org/marshalchen/images/raw/e943b6016246e1f3c2085a24e1a773e0107775b3/ultimateandroid/tutorial2-8.gif)
 
-![tutorials2](http://blog.marshalchen.com/images/tutorial2-10.gif)
+![tutorials2](https://bytebucket.org/marshalchen/images/raw/e943b6016246e1f3c2085a24e1a773e0107775b3/ultimateandroid/tutorial2-9.gif)
 
-![tutorials2](http://blog.marshalchen.com/images/tutorial2-11.gif)
+![tutorials2](https://bytebucket.org/marshalchen/images/raw/e943b6016246e1f3c2085a24e1a773e0107775b3/ultimateandroid/tutorial2-10.gif)
+
+![tutorials2](https://bytebucket.org/marshalchen/images/raw/e943b6016246e1f3c2085a24e1a773e0107775b3/ultimateandroid/tutorial2-11.gif)
+
+![tutorials2](https://bytebucket.org/marshalchen/images/raw/e943b6016246e1f3c2085a24e1a773e0107775b3/ultimateandroid/tutorial2-12.gif)
 
 
 <br>
@@ -611,7 +700,7 @@ The opensource program which I use:
 
 16.[Android View Animations](https://github.com/daimajia/AndroidViewAnimations)
 
-17.[Trinea](https://github.com/Trinea/android-common)
+17.[android-common](https://github.com/Trinea/android-common)
 
 18.[ListviewAnimations](https://github.com/nhaarman/ListViewAnimations)
 
@@ -624,6 +713,8 @@ The opensource program which I use:
 22.[FaceCrop](https://github.com/Todd-Davies/ProgressWheel)  
 
 23.[KenBurns](https://github.com/flavioarfaria/KenBurnsView)  
+
+24.[AndroidSwipeLayout](https://github.com/daimajia/AndroidSwipeLayout)
 
 There are some other projects which I write in [Update Log](https://github.com/cymcsg/UltimateAndroid/blob/master/updateLog.md).
 
@@ -667,6 +758,7 @@ License
  [101]:http://jakewharton.github.io/butterknife/ide-idea.html
  [102]:http://jakewharton.github.io/butterknife/ide-eclipse.html
  [13]:https://github.com/moagrius/TileView/tree/master
+ 
 =======
 
 
